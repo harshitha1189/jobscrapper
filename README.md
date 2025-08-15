@@ -15,23 +15,7 @@ A complete Django-based job scraping platform that collects job postings from [R
 
 ---
 
-## 📂 Project Structure
-jobscrapper/
-│
-├── jobs/
-│ ├── admin.py # Django Admin registration
-│ ├── models.py # Job model with uniqueness constraints
-│ ├── scraper.py # RemoteOK scraper (update_or_create logic)
-│ ├── views.py # API, CSV, and UI endpoints
-│ ├── urls.py # App-level URL configuration
-│ └── templates/
-│ └── jobs_list.html # Responsive frontend template
-│
-├── jobscrapper/
-│ ├── urls.py # Project-level URL routing
-│ └── settings.py # Django settings
-└── manage.py
----
+
 
 ## 🌐 API Endpoints
 
