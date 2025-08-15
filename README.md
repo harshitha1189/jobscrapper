@@ -1,5 +1,3 @@
-
-```markdown
 # 🕵️‍♀️ Job Scraper Platform
 
 A complete Django-based job scraping platform that collects job postings from [RemoteOK](https://remoteok.com/), stores them in a database, and makes them accessible via API, CSV export, and a professional web interface.
@@ -18,28 +16,22 @@ A complete Django-based job scraping platform that collects job postings from [R
 ---
 
 ## 📂 Project Structure
-
-```
-
 jobscrapper/
 │
 ├── jobs/
-│   ├── admin.py          # Django Admin registration
-│   ├── models.py         # Job model with uniqueness constraints
-│   ├── scraper.py        # RemoteOK scraper (update\_or\_create logic)
-│   ├── views.py          # API, CSV, and UI endpoints
-│   ├── urls.py           # App-level URL configuration
-│   └── templates/
-│       └── jobs\_list.html  # Responsive frontend template
+│ ├── admin.py # Django Admin registration
+│ ├── models.py # Job model with uniqueness constraints
+│ ├── scraper.py # RemoteOK scraper (update_or_create logic)
+│ ├── views.py # API, CSV, and UI endpoints
+│ ├── urls.py # App-level URL configuration
+│ └── templates/
+│ └── jobs_list.html # Responsive frontend template
 │
 ├── jobscrapper/
-│   ├── urls.py           # Project-level URL routing
-│   └── settings.py       # Django settings
+│ ├── urls.py # Project-level URL routing
+│ └── settings.py # Django settings
 └── manage.py
-
-````
-
-
+---
 
 ## 🌐 API Endpoints
 
@@ -49,34 +41,9 @@ jobscrapper/
 | `/api/jobs.csv` | GET    | CSV export with same filtering as `/api/jobs/`                 |
 | `/jobs/`        | GET    | Web UI for job search, filter, and export                      |
 
-**Example:**
+👩‍💻 Tech Stack
 
-```bash
-GET /api/jobs/?q=python&location=remote&page=1&page_size=10
-```
-
----
-
-
-
-
-## 🧠 Learning Outcomes
-
-* Enforcing uniqueness in Django models using `UniqueConstraint`
-* Building an idempotent scraper with `update_or_create()`
-* Creating REST-like endpoints without Django REST Framework
-* Implementing CSV export in Django
-* Designing a minimal, responsive frontend for API data
-
----
-
-## 👩‍💻 Tech Stack
-
-* **Backend:** Django
-* **Frontend:** HTML, CSS, JavaScript
-* **Database:** SQLite (default, can be swapped with PostgreSQL/MySQL)
-* **Scraping:** BeautifulSoup, Requests
-
----
-
-
+Backend: Django
+Frontend: HTML, CSS, JavaScript
+Database: SQLite (default, can be swapped with PostgreSQL/MySQL)
+Scraping: BeautifulSoup, Requests
